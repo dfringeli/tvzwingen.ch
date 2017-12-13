@@ -1,0 +1,229 @@
+/*
+Your theme styles
+*/
+.site-border {
+  height: 4px;
+  width: 100%;
+  z-index: 9999;
+}
+
+.header-image {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right;
+    height: 0;
+    width: 100%;
+    padding-top: 14.69%; /* 25 */
+}
+
+.menu-item {
+    font-size: 16px;
+    line-height: unset;
+}
+
+.dropdown-menu>li>a {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+@media (max-width: 767px) {
+
+    .navbar-nav>li>a {
+        padding-top: 15px;
+        padding-bottom: 15px;
+        line-height: unset;
+    }
+
+    .navbar-nav .open .dropdown-menu>li>a {
+        line-height: unset;
+    }
+
+    .navbar-nav .open .dropdown-menu .dropdown-header, .navbar-nav .open .dropdown-menu>li>a {
+        padding-top: 15px;
+        padding-bottom: 15px;
+        line-height: unset;
+    }
+}
+
+/* Navbar animated x-effect */
+.navbar-toggle {
+    border: none;
+    background: transparent !important;
+}
+.navbar-toggle:hover {
+    background: transparent !important;
+}
+.navbar-toggle .icon-bar {
+    width: 22px;
+    transition: all 0.2s;
+}
+.navbar-toggle .top-bar {
+    transform: rotate(45deg);
+    transform-origin: 10% 10%;
+}
+.navbar-toggle .middle-bar {
+    opacity: 0;
+}
+.navbar-toggle .bottom-bar {
+    transform: rotate(-45deg);
+    transform-origin: 10% 90%;
+}
+.navbar-toggle.collapsed .top-bar {
+    transform: rotate(0);
+}
+.navbar-toggle.collapsed .middle-bar {
+    opacity: 1;
+}
+.navbar-toggle.collapsed .bottom-bar {
+    transform: rotate(0);
+}
+
+/*Social Media*/
+.fa-facebook-square {
+    color: #3b5998;
+}
+
+.fa-instagram {
+    color: #8a3ab9;
+}
+
+.fa-flickr {
+    color: #ff0084;
+}
+
+.fa-envelope-o {
+    color: black;
+}
+
+.top10 {
+    margin-top: 10px;
+}
+
+.top20 {
+    margin-top: 20px;
+}
+
+.top30 {
+    margin-top: 30px;
+}
+
+.top50 {
+    margin-top: 50px;
+}
+.no-padding-left {
+    padding-left: 0;
+}
+
+.no-padding {
+    padding: 0;
+}
+
+.no-margin {
+    margin: 0;
+}
+
+.no-margin-top {
+    margin-top: 0;
+}
+
+.no-margin-bottom {
+    margin-bottom: 0;
+}
+
+
+.left10 {
+    margin-left: 10px;
+}
+
+.right10 {
+    margin-right: 10px;
+}
+
+.list-group-item-fa-icon {
+    float: right;
+    padding: 3px 7px;
+    line-height: 1;
+}
+
+.list-group-item-img-logo {
+    float: right;
+    padding: 3px 7px;
+    line-height: 1;
+    width: 15px;
+    height: 15px;
+}
+
+.badge {
+    display: inline-block;
+    min-width: 10px;
+    padding: 3px 7px;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 1;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    background-color: #777;
+    border-radius: 10px;
+}
+
+.nounderline {
+    text-decoration: none !important;
+}
+
+/* TVZwingen Latest Post Widget */
+
+.sidebar li {
+    margin: 0 0 -1px 0;
+}
+
+a.list-group-item, button.list-group-item {
+    color: #337ab7;
+}
+
+.post-date {
+  float: right;
+  color: #555;
+}
+
+/* Several */
+#content article {
+     margin-bottom: 20px; 
+}
+
+/* Opacity Fade */
+.opacity-fade, .opacity-fade a {
+    text-decoration: none !important;
+    opacity: 1;
+    transition: opacity .25s ease-in-out;
+    -moz-transition: opacity .25s ease-in-out;
+    -webkit-transition: opacity .25s ease-in-out;
+}
+
+.opacity-fade:hover {
+    cursor: hand;
+    text-decoration: none !important;
+    opacity: 0.7;
+}
+
+.image-opacity-fade {
+   opacity: 1;
+   transition: opacity .25s ease-in-out;
+   -moz-transition: opacity .25s ease-in-out;
+   -webkit-transition: opacity .25s ease-in-out;
+   }
+
+.image-opacity-fade:hover {
+    opacity: 0.5;
+}
+
+.display-block {
+    display: block;
+}
+
+.carousel-background {
+    background-color: rgba(41, 41, 41, .75);
+    padding: 5px 10px;
+    border-radius: 10px;
+}
