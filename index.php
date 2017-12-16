@@ -1,17 +1,23 @@
-<?php
-/**
- * Front to the WordPress application. This file doesn't do anything, but loads
- * wp-blog-header.php which does and tells WordPress to load the theme.
- *
- * @package WordPress
- */
+<?php get_template_part('includes/header'); ?>
 
-/**
- * Tells WordPress to load the WordPress theme and output it.
- *
- * @var bool
- */
-define('WP_USE_THEMES', true);
+<div class="container">
+  <div class="row">
+    
+    <div class="col-sm-7 col-md-8 col-lg-8">
+      <div id="content" role="main">
+				<?php get_template_part('includes/loops/content', get_post_format()); ?>
+      </div><!-- /#content -->
+    </div>
+    
+    <div class="col-sm-5 col-md-4 col-lg-4 hidden-xs" id="sidebar-desktop" role="navigation">
+      <?php get_template_part('includes/sidebar-desktop'); ?>
+    </div>
 
-/** Loads the WordPress Environment and Template */
-require( dirname( __FILE__ ) . '/wp-blog-header.php' );
+    <div class="col-xs-12 hidden-sm hidden-md hidden-lg" id="sidebar-mobile" role="navigation">
+      <?php get_template_part('includes/sidebar-mobile'); ?>
+    </div>
+    
+  </div><!-- /.row -->
+</div><!-- /.container -->
+
+<?php get_template_part('includes/footer'); ?>
