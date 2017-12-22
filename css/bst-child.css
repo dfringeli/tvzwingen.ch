@@ -227,3 +227,15 @@ a.list-group-item, button.list-group-item {
     padding: 5px 10px;
     border-radius: 10px;
 }
+
+/* The Events Calendar Custom CSS */
+.tribe-events-list-widget .type-tribe_events {
+    border: solid 1px black;
+    border-radius: 5px;
+    padding: 0px;
+}
+
+.tribe-events-list-widget .type-tribe_events .tribe-event-title,
+.tribe-events-list-widget .type-tribe_events .tribe-event-duration {
+    margin: 5px;
+}
