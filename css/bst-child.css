@@ -21,9 +21,14 @@ Your theme styles
     line-height: unset;
 }
 
-.menu-item-logo, .menu-item, .menu-item-toggle {
+.menu-item-logo, .menu-item {
     margin-top: 5px;
     margin-bottom: 5px;
+}
+
+.menu-item-toggle {
+    margin-top: 14px;
+    margin-bottom: 14px;    
 }
 
 .dropdown-menu>li>a {
