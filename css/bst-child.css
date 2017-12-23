@@ -21,6 +21,11 @@ Your theme styles
     line-height: unset;
 }
 
+.menu-item-logo, .menu-item{
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
 .dropdown-menu>li>a {
     padding-top: 10px;
     padding-bottom: 10px;

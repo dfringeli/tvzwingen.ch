@@ -31,7 +31,7 @@
         <span class="icon-bar bottom-bar"></span>
       </button>
       <a class="navbar-left right10" href="<?php echo home_url('/'); ?>">
-        <img src="<?php echo esc_url(get_theme_mod('menu_logo')); ?>" />
+        <img class="menu-item-logo" src="<?php echo esc_url(get_theme_mod('menu_logo')); ?>" />
       </a>
     </div>
     <div class="collapse navbar-collapse" id="navbarLeft">
