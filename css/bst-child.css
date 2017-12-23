@@ -21,7 +21,7 @@ Your theme styles
     line-height: unset;
 }
 
-.menu-item-logo, .menu-item{
+.menu-item-logo, .menu-item, .menu-item-toggle {
     margin-top: 5px;
     margin-bottom: 5px;
 }
