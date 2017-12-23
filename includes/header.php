@@ -5,7 +5,7 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-  <meta name="theme-color" content="#41d7f0">
+  <meta name="theme-color" content="<?php echo get_theme_mod('google_chrome_theme'); ?>">
 	<?php wp_head(); ?>
 </head>
 
