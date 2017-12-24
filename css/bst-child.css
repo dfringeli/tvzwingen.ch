@@ -42,6 +42,10 @@ Your theme styles
 }
 
 @media (max-width: 767px) {
+    
+    .menu-item-logo {
+        padding-left: 15px;
+    }
 
     .navbar-nav>li>a {
         padding-top: 15px;
