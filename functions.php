@@ -12,8 +12,45 @@ function bst_child_enqueues() {
 	wp_register_style('bst-child', get_bloginfo('stylesheet_directory') . '/css/bst-child.css', false, null);
 	wp_enqueue_style('bst-child');
 
-  /* Enqueue your own styles and scripts in here */
-  	wp_enqueue_style('font-awsome', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
+	/* Enqueue your own styles and scripts in here */
+	wp_enqueue_style('font-awsome', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
+	
+	/* parsnip.io Google Analytics Plugins */
+	wp_register_script('scrolldepth', get_bloginfo('stylesheet_directory') . '/scripts/jquery.scrolldepth.min.js', false, null);
+	wp_enqueue_script('scrolldepth');
+	wp_add_inline_script('scrolldepth', 'jQuery(function() { jQuery.scrollDepth(); });');
+
+	wp_register_script('riveted', get_bloginfo('stylesheet_directory') . '/scripts/riveted.min.js', false, null);
+	wp_enqueue_script('riveted');
+	wp_add_inline_script('riveted', 'riveted.init();');
+
+	wp_register_script('screentime', get_bloginfo('stylesheet_directory') . '/scripts/screentime.js', false, null);
+	wp_enqueue_script('screentime');
+	wp_add_inline_script('screentime', "
+		jQuery.screentime({
+		fields: [
+		  { selector: '.header-image',
+			name: 'Header'
+		  },
+		  { selector: '#content',
+			name: 'Content'
+		  },
+		  { selector: '.carousel',
+			name: 'Carousel'
+		  },
+		  { selector: '#sidebar-desktop',
+			name: 'Sitebar Desktop'
+		  },
+		  { selector: '#sidebar-mobile',
+			name: 'Sitebar Mobile'
+		  },
+		  { selector: 'footer',
+			name: 'Footer'
+		  }
+		],
+		googleAnalytics: true
+	  });");
+
 }
 add_action('wp_enqueue_scripts', 'bst_child_enqueues', 101);
 

@@ -46,10 +46,9 @@
     if (!options.fields.length) {
       return;
     }
-
     if (options.googleAnalytics) {
 
-      if (typeof ga === "function") {
+      if (typeof __gaTracker === "function") {
         universalGA = true;
       }
 
@@ -114,7 +113,7 @@
     function sendGAEvent(field, time) {
 
       if (universalGA) {
-        ga('send', 'event', 'Screentime', 'Time on Screen', field, parseInt(time, 10), {'nonInteraction': true});
+        __gaTracker('send', 'event', 'Screentime', 'Time on Screen', field, parseInt(time, 10), {'nonInteraction': true});
       }
 
       if (classicGA) {
@@ -163,18 +162,15 @@
     }
 
     function report() {
-
       var data = {};
 
       $.each(counter, function(key, val) {
         if (val > 0) {
           data[key] = val;
           counter[key] = 0;
-
           if (options.googleAnalytics) {
             sendGAEvent(key, val);
           }
-
         }
       });
 
@@ -198,7 +194,6 @@
       reporter = setInterval(function() {
         report();
       }, options.reportInterval * 1000);
-
     }
 
     function stopTimers() {
@@ -218,7 +213,6 @@
     }
 
     function init() {
-
       $.each(options.fields, function(index, elem) {
         if ($(elem.selector).length) {
           var field = new Field(elem);
@@ -241,7 +235,9 @@
 
     }
 
-    init();
+    $(document).ready(function() {
+      init();
+    });
 
   };
 
