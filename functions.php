@@ -22,7 +22,7 @@ function bst_child_enqueues() {
 
 	wp_register_script('riveted', get_bloginfo('stylesheet_directory') . '/scripts/riveted.min.js', false, null);
 	wp_enqueue_script('riveted');
-	wp_add_inline_script('riveted', 'riveted.init();');
+	wp_add_inline_script('riveted', 'riveted.init({ gaGlobal: "__gaTracker" });');
 
 	wp_register_script('screentime', get_bloginfo('stylesheet_directory') . '/scripts/screentime.js', false, null);
 	wp_enqueue_script('screentime');
