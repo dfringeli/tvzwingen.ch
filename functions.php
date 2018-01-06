@@ -15,6 +15,10 @@ function bst_child_enqueues() {
 	/* Enqueue your own styles and scripts in here */
 	wp_enqueue_style('font-awsome', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
 	
+	/* Enqueue tracking.js */	
+	wp_register_script('tracking', get_bloginfo('stylesheet_directory') . '/scripts/tracking.js', false, null);
+	wp_enqueue_script('tracking');
+
 	/* parsnip.io Google Analytics Plugins */
 	wp_register_script('scrolldepth', get_bloginfo('stylesheet_directory') . '/scripts/jquery.scrolldepth.min.js', false, null);
 	wp_enqueue_script('scrolldepth');
@@ -226,11 +230,9 @@ class TVZwingen_Widget_Recent_Posts extends WP_Widget {
 		<div class="list-group">
 			<?php while ( $r->have_posts() ) : $r->the_post(); ?>
 				<a class="list-group-item" href="<?php the_permalink(); ?>">
-				<span>
-					<?php get_the_title() ? the_title() : the_ID(); ?>
-				</span>
+				<span><?php get_the_title() ? the_title() : the_ID(); ?></span>
 				<?php if ( $show_date ) : ?>
-					<span class="post-date"><?php echo get_the_date(); ?></span>
+				<span class="post-date"><?php echo get_the_date(); ?></span>
 				<?php endif; ?>
 				</a>
 			<?php endwhile; ?>
