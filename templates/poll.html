@@ -1,0 +1,35 @@
+<div class="row">
+    <div class="col-xs-12">
+        <span class="hidden" id="GA-pollName" data-content="pollName"></span>
+        <h4 data-content="question"></h4>
+        <p data-content="comment"></p>
+    </div>
+</div>
+<div id="pollOptions">
+    <div class="row">
+        <div class="col-xs-6 col-md-3">
+            <button type="button" class="btn btn-primary btn-block poll-button" data-content="option1"></button>
+        </div>
+        <div class="col-xs-6 col-md-3">
+            <button type="button" class="btn btn-primary btn-block poll-button" data-content="option2"></button>
+        </div>
+    </div>
+</div>
+<div id="pollEcho" class="hidden">
+    <div class="alert alert-info" role="alert">
+        Danke für Deine Stimme!
+    </div>
+</div>
+
+<script>
+    jQuery(".poll-button").click(function () {
+        if (typeof __gaTracker === "function") {
+            var pollOption = jQuery(this).text();
+            var pollName = jQuery("#GA-pollName").text();
+            console.log("__gaTracker('send', 'event', 'GA-Poll', " + pollName + ", " + pollOption + ", 1);")
+        }
+
+        jQuery("#pollOptions").hide(250);
+        jQuery("#pollEcho").removeClass('hidden');
+    })
+</script>
