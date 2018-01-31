@@ -26,7 +26,7 @@
         if (typeof __gaTracker === "function") {
             var pollOption = jQuery(this).text();
             var pollName = jQuery("#GA-pollName").text();
-            console.log("__gaTracker('send', 'event', 'GA-Poll', " + pollName + ", " + pollOption + ", 1);")
+            __gaTracker('send', 'event', 'GA-Poll', pollName, pollOption, 1);
         }
 
         jQuery("#pollOptions").hide(250);
