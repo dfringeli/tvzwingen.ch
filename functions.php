@@ -54,12 +54,6 @@ function bst_child_enqueues() {
 		],
 		googleAnalytics: true
 	  });");
-
-	  wp_register_script('jquery.loadTemplate', get_bloginfo('stylesheet_directory') . '/scripts/jquery.loadTemplate.min.js', false, null);
-	  wp_enqueue_script('jquery.loadTemplate');
-
-	  wp_register_script('ga.poll', get_bloginfo('stylesheet_directory') . '/scripts/ga.poll.js', false, null);
-	  wp_enqueue_script('ga.poll');
 }
 add_action('wp_enqueue_scripts', 'bst_child_enqueues', 101);
 
