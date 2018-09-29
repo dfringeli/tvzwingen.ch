@@ -267,6 +267,18 @@ a.list-group-item, button.list-group-item {
     border-radius: 10px;
 }
 
+.carousel-inner .item img {
+    object-fit: cover;
+    height: 250px;
+}
+
+@media (min-width: 970px) {
+
+    .carousel-inner .item img {
+        height: 550px;
+    }
+}
+
 /* The Events Calendar Custom CSS */
 .tribe-events-list-widget .type-tribe_events {
     border: solid 1px #ddd;
