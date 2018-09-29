@@ -16,6 +16,12 @@ The Single Posts Loop
         </header>
         <section>
             <?php the_excerpt(); ?>
+            <div class="post-thumbnail">
+              <?php
+                $image_src = wp_get_attachment_image_src( get_post_thumbnail_id(),'full' );
+                echo '<img src="' . $image_src[0]  . '" class="img-responsive" />';
+              ?>
+            </div>
             <?php the_content()?>
             <br />
             <?php wp_link_pages(); ?>

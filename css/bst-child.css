@@ -202,9 +202,29 @@ a.list-group-item, button.list-group-item {
 }
 
 .post-date {
-  float: right;
-  color: #555;
+    float: right;
+    color: #555;
 }
+
+.post-thumbnail {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.post-thumbnail img {
+    width: 80%;
+    object-fit: cover;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (min-width: 970px) {
+
+    .post-thumbnail img {
+        width: 40%;
+    }    
+ }
 
 /* Several */
 #content article {
